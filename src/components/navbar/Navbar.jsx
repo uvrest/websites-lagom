@@ -29,7 +29,7 @@ const Navbar = () => {
                     zIndex: 999,
                     minHeight: "auto",
                     py: { xs: 2, md: 2 },
-                    backgroundColor: theme.custom.color.darkGreen,
+                    backgroundColor: theme.palette.background.paper,
                     boxShadow: "none",
                     borderBottom: `1px solid ${theme.palette.primary.main}`,
                 }}
@@ -42,7 +42,7 @@ const Navbar = () => {
 
                             {/** Navbar logo */}
                             <Box>
-                                <RenderLogo />
+                                <RenderLogo width={250} />
                             </Box>
 
                             {/** Navbar menu */}

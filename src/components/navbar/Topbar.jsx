@@ -6,13 +6,12 @@ import { getContrastTextFor } from "../../utils/themeUtils";
 import ContactItem from "../shared/ContactItem";
 
 const contactItems = [
-    { icon: <PhoneRounded />, text: "(51) 99257-3402" },
-    { icon: <WhatsApp />, text: "(51) 99257-3402" },
-    { icon: <EmailRounded />, text: "ecopoars@gmail.com" },
+    { icon: <WhatsApp />, text: "(47) 99607-0223" },
+    { icon: <EmailRounded />, text: "contato@lagomengenharia.com.br" },
 ];
 
 const socialMediaItems = [
-    { icon: <Instagram />, href: "https://www.instagram.com" },
+    { icon: <Instagram />, href: "https://www.instagram.com/lagom.engenharia/" },
 ];
 
 const SocialMediaItem = ({ icon, href, target = "_blank" }) => (
@@ -55,7 +54,10 @@ const TopBar = () => {
                 </Stack>
 
                 <Box display="flex" sx={{ marginLeft: "auto" }}>
+
+                    {/*}
                     <ToggleThemeSwitch />
+                    {*/}
 
                     <Stack direction="row" spacing={1}>
                         {socialMediaItems.map((item, index) => (

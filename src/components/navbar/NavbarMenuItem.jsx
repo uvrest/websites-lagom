@@ -12,10 +12,10 @@ const NavbarMenuItem = ({ label, to, isActive, isSubmenuOpen, hasSubmenu = false
             p: 1,
             fontWeight: 600,
             textTransform: "capitalize",
-            color: isActive ? theme.palette.secondary.main : "#f0f0f0",
+            color: isActive ? theme.palette.primary.main : theme.palette.text.primary,
             transition: "color 0.2s ease-in-out",
             "&:hover": {
-                color: theme.palette.secondary.main,
+                color: theme.palette.primary.main,
             },
         })}
     >

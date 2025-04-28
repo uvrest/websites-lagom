@@ -37,7 +37,7 @@ const globalTheme = {
     typography: typography,
     custom: {
         color: {
-            darkGreen: '#03211A',
+            darkGreen: '#072b31',
         },
     },
 }
@@ -48,7 +48,7 @@ export const lightTheme = createTheme({
     palette: {
         mode: 'light',
         primary: {
-            main: '#8EC73D',
+            main: '#E2E868',
         },
         secondary: {
             main: '#F9900A',
