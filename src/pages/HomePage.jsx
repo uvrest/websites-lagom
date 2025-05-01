@@ -1,4 +1,4 @@
-import HeroSlider from "../components/hero/HeroSlider";
+import HeroSlider from "../components/hero/swiper-slider/HeroSlider";
 import PageSection from "./sections/_PageSection";
 import FeaturesSection from "./sections/FeaturesSection";
 import AboutSection from "./sections/AboutSection";

@@ -34,7 +34,7 @@ const Navbar = () => {
                     borderBottom: `1px solid ${theme.palette.primary.main}`,
                 }}
             >
-                <Container maxWidth="xl">
+                <Container maxWidth="lg">
 
                     <Toolbar disableGutters>
 
@@ -46,13 +46,16 @@ const Navbar = () => {
                             </Box>
 
                             {/** Navbar menu */}
-                            <Box sx={{ display: { xs: "none", md: "flex" }, }}>
-                                <DesktopMenu pathname={location.pathname} onCloseMobile={handleMenuToggle} />
-                            </Box>
+                            <Box display="flex" alignItems="center">
 
-                            {/** Navbar actions */}
-                            <Box>
-                                <NavbarCTA />
+                                <Box sx={{ display: { xs: "none", md: "flex" }, mr: 2 }}>
+                                    <DesktopMenu pathname={location.pathname} onCloseMobile={handleMenuToggle} />
+                                </Box>
+
+                                {/** Navbar actions */}
+                                <Box>
+                                    <NavbarCTA />
+                                </Box>
                             </Box>
 
                             {/** Hamburger menu */}

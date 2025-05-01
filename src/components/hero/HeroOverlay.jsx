@@ -1,4 +1,3 @@
-// components/hero/HeroOverlay.jsx
 import { Box } from "@mui/material";
 
 const HeroOverlay = ({

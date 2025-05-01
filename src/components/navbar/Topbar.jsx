@@ -40,7 +40,7 @@ const TopBar = () => {
             gap={2}
             backgroundColor={{ backgroundColor: theme.palette.primary.main }}
         >
-            <Container maxWidth="xl" sx={{ display: "flex", alignItems: "center" }}>
+            <Container sx={{ display: "flex", alignItems: "center" }}>
 
                 <Stack direction="row" spacing={2}>
                     {contactItems.map((item, index) => (

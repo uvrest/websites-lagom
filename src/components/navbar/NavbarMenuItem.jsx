@@ -5,10 +5,10 @@ import { Link as RouterLink } from "react-router";
 const NavbarMenuItem = ({ label, to, isActive, isSubmenuOpen, hasSubmenu = false }) => (
     <Link
         component={RouterLink}
-        variant="body1"
         underline="none"
         to={to}
         sx={(theme) => ({
+            fontSize: "1.1rem",
             p: 1,
             fontWeight: 600,
             textTransform: "capitalize",
