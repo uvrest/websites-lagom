@@ -17,13 +17,14 @@ const breakpoints = {
 const typography = {
     htmlFontSize: 16,
     fontSize: 14,
-    fontFamily: `"Montserrat", "Roboto", "Helvetica", "Arial", sans-serif`,
-    h1: { fontSize: "3.0625rem", fontWeight: 700 }, // 49px
-    h2: { fontSize: "2.4375rem", fontWeight: 600 }, // 39px
-    h3: { fontSize: "1.9375rem", fontWeight: 600 }, // 31px
-    h4: { fontSize: "1.5625rem", fontWeight: 500 }, // 25px
-    h5: { fontSize: "1.25rem", fontWeight: 400 }, // 20px
-    h6: { fontSize: "1.125rem", fontWeight: 300 }, // 18px
+    fontFamily: `"Poppins", sans-serif`,
+    h1: { fontSize: "3.0625rem", fontWeight: 700 },
+    h2: { fontSize: "2.4375rem", fontWeight: 600 },
+    h3: { fontSize: "1.9375rem", fontWeight: 600 },
+    h4: { fontSize: "1.5625rem", fontWeight: 500 },
+    h5: { fontSize: "1.25rem", fontWeight: 400 },
+    h6: { fontSize: "1.125rem", fontWeight: 300 },
+    subtitle1: { fontSize: "1.225rem", fontWeight: 300, lineHeight: 1.6, },
     body1: { fontSize: "1rem", fontWeight: 400 }, // 16px
     body2: { fontSize: "0.875rem", fontWeight: 400 }, // 14px
     caption: { fontSize: "0.75rem", fontWeight: 400 }, // 12px

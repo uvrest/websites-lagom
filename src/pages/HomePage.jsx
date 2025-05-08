@@ -1,4 +1,5 @@
-import HeroSlider from "../components/hero/swiper-slider/HeroSlider";
+//import HeroSlider from "../components/hero/swiper-slider/HeroSlider";
+import VideoBoxSection from "./sections/VideoBoxSection";
 import PageSection from "./sections/_PageSection";
 import FeaturesSection from "./sections/FeaturesSection";
 import AboutSection from "./sections/AboutSection";
@@ -9,7 +10,7 @@ import FaqSection from "./sections/FaqSection";
 const HomePage = () => {
     return (
         <>
-            <HeroSlider />
+            <VideoBoxSection />
 
             <PageSection background="default" container={true} paddingY={0}>
                 <FeaturesSection />
