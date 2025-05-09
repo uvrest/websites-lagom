@@ -16,7 +16,7 @@ const ContactCard = ({ title, description, icon, sx }) => {
                     background: theme.palette.primary.main,
                 },
                 '&:hover .custom-icon-button': {
-                    color: theme.palette.primary.main,
+                    color: theme.palette.primary.dark,
                     background: theme.palette.common.white,
                 },
                 ...sx

@@ -3,10 +3,10 @@ import { WhatsApp, PhoneRounded, EmailRounded, PinDropRounded } from "@mui/icons
 import ContactCard from "../cards/ContactCard";
 
 const contactData = [
-    { id: 1, title: "Contato", description: "(51) 99257-3402", icon: PhoneRounded },
-    { id: 2, title: "E-mail", description: "ecoportus@gmail.com", icon: EmailRounded },
-    { id: 3, title: "Endereço", description: "Av. Alberto Bins 806, Porto Alegre/RS", icon: PinDropRounded },
-    { id: 4, title: "Whatsapp", description: "(51) 99257-3402", icon: WhatsApp },
+    { id: 1, title: "Contato", description: "(47) 99607-0223", icon: PhoneRounded },
+    { id: 2, title: "E-mail", description: "contato@lagomengenharia", icon: EmailRounded },
+    { id: 3, title: "Localização", description: "Itapema/RS", icon: PinDropRounded },
+    { id: 4, title: "Whatsapp", description: "(47) 99607-0223", icon: WhatsApp },
 ];
 
 const ContactCardList = () => {

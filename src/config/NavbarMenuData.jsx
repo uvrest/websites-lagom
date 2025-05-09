@@ -13,7 +13,7 @@ export const NavbarMenuData = [
     },
     {
         label: "Serviços",
-        to: "#",
+        to: "/servicos",
     },
     {
         label: "Clientes",

@@ -19,7 +19,7 @@ const HomePage = () => {
             </PageSection>
 
             <PageSection background="customDarkGreen" container={true} paddingY={12} position="relative">
-                <TestimonialsSection />
+                <TestimonialsSection theme="dark" />
             </PageSection>
 
             <PageSection background="default" container={true} paddingY={0}>

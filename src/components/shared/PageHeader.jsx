@@ -15,7 +15,7 @@ const PageHeader = ({ title, imageName }) => {
     return (
         <Box
             sx={{
-                height: 280,
+                height: 350,
                 display: "flex",
                 alignItems: "flex-end",
                 backgroundImage: hasImage ? `url(${imageUrl})` : undefined,
@@ -60,7 +60,7 @@ const PageHeader = ({ title, imageName }) => {
                 </Breadcrumbs>
 
                 {title && (
-                    <Typography variant="h2" fontWeight={700}>
+                    <Typography variant="h2" component="h1" fontWeight={600}>
                         {title}
                     </Typography>
                 )}

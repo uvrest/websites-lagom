@@ -6,20 +6,14 @@ import DefaultPageLayout from "../layouts/DefaultPageLayout";
 import ServiceLayout from "../layouts/ServiceLayout";
 import NotFoundPage from "../pages/NotFoundPage";
 
-import DesentupimentoPage from "../pages/services/DesentupimentoPage";
-import EncanadorPage from "../pages/services/EncanadorPage";
-import CacaVazamentoPage from "../pages/services/CacaVazamentoPage";
-import LimpaFossaPage from "../pages/services/LimpaFossaPage";
-import HidrojateamentoPage from "../pages/services/HidrojateamentoPage";
-import DedetizacaoPage from "../pages/services/DedetizacaoPage";
-import LimpezaCaixasDaguaPage from "../pages/services/LimpezaCaixasDaguaPage";
-import ArCondicionadoPage from "../pages/services/ArCondicionadoPage";
-import ObrasPinturasReformasPage from "../pages/services/ObrasPinturasReformasPage";
+import LicenciamentoPage from "../pages/services/LicenciamentoPage";
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AboutPage = lazy(() => import('../pages/AboutPage'));
 const ServicesPage = lazy(() => import('../pages/ServicesPage'));
+const ClientsPage = lazy(() => import('../pages/ClientsPage'));
 const ContactPage = lazy(() => import('../pages/ContactPage'));
+const BlogPage = lazy(() => import('../pages/BlogPage'));
 
 const AppRoutes = () => {
 
@@ -33,7 +27,7 @@ const AppRoutes = () => {
 
                     <Route index element={<HomePage />} />
 
-                    <Route element={<DefaultPageLayout title="Sobre a Ecoportus" imageName="about.jpg" />}>
+                    <Route element={<DefaultPageLayout title="Sobre a Lagom" imageName="about.jpg" />}>
                         <Route path="/sobre" element={<AboutPage />} />
                     </Route>
 
@@ -44,21 +38,24 @@ const AppRoutes = () => {
                         </Route>
 
                         <Route element={<ServiceLayout />}>
-                            <Route path="encanador-hidraulico" element={<EncanadorPage />} />
-                            <Route path="desentupimentos" element={<DesentupimentoPage />} />
-                            <Route path="limpeza-de-fossas" element={<LimpaFossaPage />} />
-                            <Route path="caca-vazamentos" element={<CacaVazamentoPage />} />
-                            <Route path="limpeza-de-caixa-dagua" element={<LimpezaCaixasDaguaPage />} />
-                            <Route path="hidrojateamento" element={<HidrojateamentoPage />} />
-                            <Route path="dedetizacao" element={<DedetizacaoPage />} />
-                            <Route path="instalacao-de-ar-condicionados" element={<ArCondicionadoPage />} />
-                            <Route path="obras-pinturas-reformas" element={<ObrasPinturasReformasPage />} />
+                            <Route path="licenciamento-ambiental" element={<LicenciamentoPage />} />
+                            <Route path="planejamento-urbano" element={<LicenciamentoPage />} />
+                            <Route path="solucoes-ambientais" element={<LicenciamentoPage />} />
+                            <Route path="consultoria-geotecnica" element={<LicenciamentoPage />} />
                         </Route>
 
                     </Route>
 
+                    <Route element={<DefaultPageLayout title="Clientes" imageName="about.jpg" />}>
+                        <Route path="/clientes" element={<ClientsPage />} />
+                    </Route>
+
                     <Route element={<DefaultPageLayout title="Contato" imageName="about.jpg" />}>
                         <Route path="/contato" element={<ContactPage />} />
+                    </Route>
+
+                    <Route element={<DefaultPageLayout title="Artigos" imageName="about.jpg" />}>
+                        <Route path="/artigos" element={<BlogPage />} />
                     </Route>
 
                     <Route path="*" element={<NotFoundPage />} />

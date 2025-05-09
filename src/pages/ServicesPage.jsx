@@ -1,11 +1,11 @@
 import PageSection from "./sections/_PageSection";
-import ServiceSection from "./sections/ServiceSection";
+import FeaturesSection from "./sections/FeaturesSection";
 
 const ServicesPage = () => {
     return (
         <>
             <PageSection background="paper" container={true}>
-                <ServiceSection />
+                <FeaturesSection />
             </PageSection>
         </>
     )

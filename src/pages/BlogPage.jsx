@@ -1,11 +1,11 @@
 import PageSection from "./sections/_PageSection";
 
-const AboutPage = () => {
+const BlogPage = () => {
     return (
         <PageSection>
-            Conteúdo da página sobre
+            Conteúdo da página artigos
         </PageSection>
     )
 }
 
-export default AboutPage;
+export default BlogPage;

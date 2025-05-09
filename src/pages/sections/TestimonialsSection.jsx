@@ -44,14 +44,14 @@ const testimonials = [
     },
 ];
 
-const TestimonialsSection = () => {
+const TestimonialsSection = ({ theme = "light" }) => {
     return (
         <>
             <PageSectionTitle
                 overline="Depoimentos"
                 title="O que os nossos clientes e parceiros têm a dizer?"
                 align="center"
-                color="common.white"
+                color={theme === "light" ? "common.black" : "common.white"}
             />
 
             <TestimonialSlider testimonials={testimonials} />
