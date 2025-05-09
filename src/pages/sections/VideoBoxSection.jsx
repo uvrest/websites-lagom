@@ -6,7 +6,6 @@ import Highlight from "../../components/text/Highlight";
 const VideoBoxSection = () => {
 
     const overlayColor = 'linear-gradient(90deg,rgba(7, 43, 49, 0.93) 0%, rgba(22, 117, 106, 0.6) 54%, rgba(237, 221, 83, 0.34) 100%)';
-    //const overlayColor = 'radial-gradient(circle,rgba(7, 43, 49, 1) 0%, rgba(226, 232, 104, 1) 100%)';
 
     return (
         <VideoBox videoPath={backgroundVideo} overlayColor={overlayColor}>

@@ -1,39 +1,59 @@
-import { Grid, Container, Box } from "@mui/material";
-import { BuildRounded, ShieldRounded, QueryBuilderRounded, EmojiNatureRounded } from "@mui/icons-material";
+import { Box, Grid } from "@mui/material";
+import { ContentPasteRounded, LocationCityRounded, CompostRounded, SquareFootRounded } from "@mui/icons-material";
+import PageSectionTitle from "./_PageSectionTitle";
 import FeatureCard from "../../components/cards/FeatureCard";
+import licenciamentoAmbiental from "../../assets/images/services/licenciamento-ambiental.jpg";
+import planejamentoUrbano from "../../assets/images/services/planejamento-urbano.jpg";
+import solucoesAmbientais from "../../assets/images/services/solucoes-ambientais.jpg";
+import consultoriaGeotecnica from "../../assets/images/services/consultoria-geotecnica.jpg";
 
-const features = [
+const services = [
     {
-        icon: BuildRounded,
-        title: "Serviços Especializados",
-        description: "Técnicos qualificados para cada necessidade hidráulica ou ambiental.",
+        id: 1,
+        icon: ContentPasteRounded,
+        title: "Licenciamento Ambiental",
+        description: "Assessoria completa no processo de licenciamento ambiental, garantindo conformidade legal e sustentabilidade para seu empreendimento.",
+        image: licenciamentoAmbiental,
     },
     {
-        icon: ShieldRounded,
-        title: "Segurança e Qualidade",
-        description: "Equipe identificada, pontual e com protocolos de segurança.",
+        id: 2,
+        icon: LocationCityRounded,
+        title: "Planejamento Urbano",
+        description: "Soluções estratégicas para o desenvolvimento urbano, promovendo ocupação ordenada, mobilidade e qualidade de vida.",
+        image: planejamentoUrbano,
     },
     {
-        icon: QueryBuilderRounded,
-        title: "Atendimento Emergencial 24hrs",
-        description: "Disponíveis a qualquer hora, inclusive feriados e finais de semana.",
+        id: 3,
+        icon: CompostRounded,
+        title: "Soluções Ambientais",
+        description: "Projetos e ações sustentáveis para prevenção, mitigação e recuperação de impactos ambientais em diferentes setores.",
+        image: solucoesAmbientais,
     },
     {
-        icon: EmojiNatureRounded,
-        title: "Compromisso Ambiental",
-        description: "Soluções que respeitam o meio ambiente e as legislações vigentes.",
+        id: 4,
+        icon: SquareFootRounded,
+        title: "Consultoria Geotécnica",
+        description: "Análises técnicas do solo e subsolo para garantir segurança, viabilidade e eficiência em obras e empreendimentos.",
+        image: consultoriaGeotecnica,
     },
 ];
 
 const FeaturesSection = () => {
     return (
-        <Grid container spacing={1}>
-            {features.map((item, idx) => (
-                <Grid size={{ xs: 12, sm: 6, md: 3 }} key={idx}>
-                    <FeatureCard {...item} />
-                </Grid>
-            ))}
-        </Grid>
+        <Box>
+            <PageSectionTitle
+                overline="Nossos Serviços"
+                title="Conheça as nossas soluções ambientais"
+                align="center"
+            />
+            <Grid container spacing={2}>
+                {services.map((service, _) => (
+                    <Grid size={{ xs: 12, sm: 12, md: 6 }} key={service.id}>
+                        <FeatureCard {...service} sx={{ height: "100%", }} />
+                    </Grid>
+                ))}
+            </Grid>
+        </Box>
     );
 };
 

@@ -15,20 +15,76 @@ const breakpoints = {
 };
 
 const typography = {
-    htmlFontSize: 16,
-    fontSize: 14,
     fontFamily: `"Poppins", sans-serif`,
-    h1: { fontSize: "3.0625rem", fontWeight: 700 },
-    h2: { fontSize: "2.4375rem", fontWeight: 600 },
-    h3: { fontSize: "1.9375rem", fontWeight: 600 },
-    h4: { fontSize: "1.5625rem", fontWeight: 500 },
-    h5: { fontSize: "1.25rem", fontWeight: 400 },
-    h6: { fontSize: "1.125rem", fontWeight: 300 },
-    subtitle1: { fontSize: "1.225rem", fontWeight: 300, lineHeight: 1.6, },
-    body1: { fontSize: "1rem", fontWeight: 400 }, // 16px
-    body2: { fontSize: "0.875rem", fontWeight: 400 }, // 14px
-    caption: { fontSize: "0.75rem", fontWeight: 400 }, // 12px
-    button: { fontSize: "0.875rem", fontWeight: 500 }, // 14px
+    fontSize: 14,
+    htmlFontSize: 16,
+    h1: {
+        fontSize: "3.815rem",
+        fontWeight: 700,
+        lineHeight: 1.2,
+    },
+    h2: {
+        fontSize: "3.052rem",
+        fontWeight: 600,
+        lineHeight: 1.25,
+    },
+    h3: {
+        fontSize: "2.441rem",
+        fontWeight: 600,
+        lineHeight: 1.3,
+    },
+    h4: {
+        fontSize: "1.953rem",
+        fontWeight: 500,
+        lineHeight: 1.35,
+    },
+    h5: {
+        fontSize: "1.563rem",
+        fontWeight: 400,
+        lineHeight: 1.4,
+    },
+    h6: {
+        fontSize: "1.25rem",
+        fontWeight: 300,
+        lineHeight: 1.5,
+    },
+    body1: {
+        fontSize: "1rem",
+        fontWeight: 400,
+        lineHeight: 1.6,
+    },
+    body2: {
+        fontSize: "0.87rem",
+        fontWeight: 400,
+        lineHeight: 1.6,
+    },
+    subtitle1: {
+        fontSize: "1.22rem",
+        fontWeight: 300,
+        lineHeight: 1.6,
+    },
+    subtitle2: {
+        fontSize: "1.12rem",
+        fontWeight: 300,
+        lineHeight: 1.6,
+    },
+    caption: {
+        fontSize: "0.75rem",
+        fontWeight: 400,
+        lineHeight: 1.4,
+    },
+    overline: {
+        fontSize: "0.87rem",
+        fontWeight: 500,
+        letterSpacing: "0.08em",
+        lineHeight: 1.6,
+        textTransform: "uppercase",
+    },
+    button: {
+        fontWeight: 300,
+        lineHeight: 1.75,
+        textTransform: "uppercase",
+    },
 };
 
 // Configurações globais do tema
@@ -52,11 +108,11 @@ export const lightTheme = createTheme({
             main: '#E2E868',
         },
         secondary: {
-            main: '#F9900A',
+            main: '#168497',
         },
         background: {
-            default: '#e0f8da',
-            paper: '#fafef9',
+            default: '#fefff1',
+            paper: '#fffffd',
         },
     },
 });

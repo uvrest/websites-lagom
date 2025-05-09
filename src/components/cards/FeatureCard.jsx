@@ -1,37 +1,62 @@
-import { Box, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, CardActionArea, Typography, Avatar, Stack } from "@mui/material";
 
-const FeatureCard = ({ icon: Icon, title, description }) => {
+const FeatureCard = ({ icon: Icon, title, description, image, alt = '', sx = {} }) => {
     return (
-        <Box
+        <Card
             sx={{
-                position: "relative",
-                top: -16,
-                zIndex: 1,
-                height: "100%",
-                p: 3,
-                textAlign: "left",
-                borderRadius: 2,
-                backgroundColor: "background.paper",
-                boxShadow: 2,
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                textAlign: 'center',
                 transition: "all 0.3s ease-in-out",
                 "&:hover": {
                     boxShadow: 4,
                     transform: "translateY(-8px)",
                 },
+                ...sx,
             }}
         >
+            <CardActionArea>
+                <CardContent sx={{ mb: 2 }}>
 
-            {Icon && <Icon sx={{ fontSize: 40, mb: 1, color: "primary.main" }} />}
+                    <Stack spacing={2} alignItems="center">
 
-            <Typography variant="h5" fontWeight={600} gutterBottom>
-                {title}
-            </Typography>
+                        {/* Ícone */}
+                        <Avatar
+                            sx={(theme) => ({
+                                bgcolor: 'primary.light',
+                                width: 85,
+                                height: 85,
+                                transition: "background-color 0.3s",
+                            })}
+                        >
+                            {Icon && <Icon sx={{ fontSize: 40, color: 'text.primary' }} />}
+                        </Avatar>
 
-            <Typography variant="body1" color="text.secondary">
-                {description}
-            </Typography>
+                        {/* Título */}
+                        <Typography variant="h5" component="h3" fontWeight={500} gutterBottom>
+                            {title}
+                        </Typography>
 
-        </Box>
+                        {/* Descrição */}
+                        <Typography variant="body1" color="text.secondary">
+                            {description}
+                        </Typography>
+                    </Stack>
+                </CardContent>
+
+                {/* Imagem (opcional) */}
+                {image && (
+                    <CardMedia
+                        component="img"
+                        alt={alt || title}
+                        height="225"
+                        image={image}
+                        loading="lazy"
+                    />
+                )}
+            </CardActionArea>
+        </Card>
     );
 };
 
