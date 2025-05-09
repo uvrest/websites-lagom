@@ -4,6 +4,7 @@ import FooterContentBlock from "./FooterContentBlock";
 import FooterLinkList from "./FooterLinkList";
 import FooterContactList from "./FooterContactList";
 import SocialMediaList from "../shared/SocialMediaList";
+import Highlight from "../text/Highlight";
 import { QuickMenuData, ServicesMenuData } from "../../config/FooterMenuData";
 
 const Footer = () => {
@@ -16,16 +17,16 @@ const Footer = () => {
                     color: theme.palette.background.paper,
                 })}
             >
-                <Container maxWidth="xl">
+                <Container maxWidth="lg">
                     <Grid container spacing={6}>
 
                         <Grid size={{ md: 3 }}>
                             <FooterContentBlock>
 
-                                <RenderLogo />
+                                <RenderLogo width={230} theme="light" />
 
                                 <Typography variant="body2" mt={3}>
-                                    Especialistas em soluções ambientais com atendimento rápido e serviço de confiança.
+                                    A <Highlight>Lagom</Highlight> possui especialistas em licenciamento e soluções ambientais com atendimento personalizado e serviços de confiança.
                                 </Typography>
 
                                 <SocialMediaList spacing={1} sx={{ mt: 3 }} />
@@ -33,15 +34,15 @@ const Footer = () => {
                             </FooterContentBlock>
                         </Grid>
 
-                        <Grid size={{ md: 2 }}>
+                        <Grid size={{ md: 3 }}>
                             <FooterContentBlock blockTitle="Menu Rápido">
                                 <FooterLinkList linkList={QuickMenuData} />
                             </FooterContentBlock>
                         </Grid>
 
-                        <Grid size={{ md: 4 }}>
+                        <Grid size={{ md: 3 }}>
                             <FooterContentBlock blockTitle="Serviços">
-                                <FooterLinkList linkList={ServicesMenuData} columns={2} />
+                                <FooterLinkList linkList={ServicesMenuData} />
                             </FooterContentBlock>
                         </Grid>
 

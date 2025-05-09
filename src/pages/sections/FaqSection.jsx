@@ -1,47 +1,63 @@
-import { Box, Container, Grid, Typography, Stack } from "@mui/material";
+import { Box, Grid, Stack } from "@mui/material";
+import PageSectionTitle from "./_PageSectionTitle";
 import FaqAccordion from "../../components/accordions/FaqAccordion";
+import whyUsImg from "../../assets/images/why-us/fact-image.png";
 
 const faqItems = [
     {
-        question: "Atendem finais de semana e feriados?",
-        answer: "Sim! Temos atendimento 24h, todos os dias da semana, incluindo sábados, domingos e feriados.",
+        question: "Pergunta 1?",
+        answer: "Respota da pergunta 1.",
     },
     {
-        question: "Os produtos utilizados são seguros?",
-        answer: "Todos os produtos são certificados, seguros para humanos e pets, e aprovados pelos órgãos reguladores.",
+        question: "Pergunta 2?",
+        answer: "Respota da pergunta 2.",
     },
     {
-        question: "Preciso sair de casa durante o serviço?",
-        answer: "Na maioria dos casos, não. Nossa equipe trabalha com segurança, higiene e o mínimo de incômodo possível.",
+        question: "Pergunta 3?",
+        answer: "Respota da pergunta 3.",
     },
     {
-        question: "Qual o prazo para atendimento?",
-        answer: "Nosso tempo médio de chegada é entre 30 a 60 minutos após a confirmação, dependendo da região.",
+        question: "Pergunta 4?",
+        answer: "Respota da pergunta 4.",
     },
 ];
 
 const FaqSection = () => {
     return (
-        <>
-            <Box textAlign="center" mb={6} sx={{ maxWidth: "60%", mx: "auto" }}>
-                <Typography variant="overline" color="secondary.main" fontWeight={600}>
-                    Dúvidas Frequentes
-                </Typography>
-                <Typography variant="h2" fontWeight={700}>
-                    Ainda com perguntas? Nós respondemos
-                </Typography>
-            </Box>
+        <Grid container spacing={1}>
+            <Grid size={{ xs: 12, md: 7 }}>
+                <Box py={8}>
+                    <PageSectionTitle
+                        overline="Perguntas Frequentes"
+                        title="Ainda com dúvidas? Nós respondemos"
+                    />
 
-            <Grid container>
-                <Grid size={{ xs: "grow", md: 8 }} offset={{ md: 2 }}>
                     <Stack spacing={2}>
                         {faqItems.map((item, idx) => (
                             <FaqAccordion key={idx} {...item} />
                         ))}
                     </Stack>
-                </Grid>
+                </Box>
             </Grid>
-        </>
+
+            <Grid size={{ xs: 12, md: 5 }}>
+                <Box height="100%" position="relative">
+                    <Box
+                        component="img"
+                        src={whyUsImg}
+                        alt="Por que escolher a Ecoportus?"
+                        sx={{
+                            maxHeight: "105%",
+                            maxWidth: "100%",
+                            position: "absolute",
+                            left: "50%",
+                            transform: "translateX(-50%)",
+                            bottom: 0,
+                        }}
+                    />
+                </Box>
+            </Grid>
+        </Grid>
     );
 };
 

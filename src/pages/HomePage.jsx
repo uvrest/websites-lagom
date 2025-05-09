@@ -1,4 +1,3 @@
-//import HeroSlider from "../components/hero/swiper-slider/HeroSlider";
 import VideoBoxSection from "./sections/VideoBoxSection";
 import PageSection from "./sections/_PageSection";
 import FeaturesSection from "./sections/FeaturesSection";
@@ -23,7 +22,7 @@ const HomePage = () => {
                 <TestimonialsSection />
             </PageSection>
 
-            <PageSection background="default" container={true} paddingY={{ xs: 8, md: 8 }}>
+            <PageSection background="default" container={true} paddingY={0}>
                 <FaqSection />
             </PageSection>
         </>
