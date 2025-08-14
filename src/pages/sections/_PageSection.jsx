@@ -1,5 +1,6 @@
 import { Box, Container } from "@mui/material";
-import { useTheme } from "@mui/material/styles";
+import { useMemo } from "react";
+import { useResolveThemeColor } from "../../utils/colorUtils";
 
 const PageSection = ({
     background = "paper",
@@ -11,40 +12,18 @@ const PageSection = ({
     children,
     ...rest
 }) => {
-    const theme = useTheme();
 
-    const colorMap = {
-        white: theme.palette.common.white,
-        black: theme.palette.common.black,
-        paper: theme.palette.background.paper,
-        default: theme.palette.background.default,
-        primary: theme.palette.primary.main,
-        primaryLight: theme.palette.primary.light,
-        primaryDark: theme.palette.primary.dark,
-        secondary: theme.palette.secondary.main,
-        secondaryLight: theme.palette.secondary.light,
-        secondaryDark: theme.palette.secondary.dark,
-        customDarkGreen: theme.custom?.color?.darkGreen,
-    };
+    const resolve = useResolveThemeColor();
+    const bg = useMemo(() => resolve(background), [background, resolve]);
 
     return (
         <Box
             component="section"
             id={id}
-            sx={{
-                py: paddingY,
-                backgroundColor: colorMap[background] || colorMap.paper,
-                ...sx,
-            }}
+            sx={[{ py: paddingY, backgroundColor: bg }, sx]}
             {...rest}
         >
-            {container ? (
-                <Container maxWidth={maxWidth}>
-                    {children}
-                </Container>
-            ) : (
-                children
-            )}
+            {container ? <Container maxWidth={maxWidth}>{children}</Container> : children}
         </Box>
     );
 };

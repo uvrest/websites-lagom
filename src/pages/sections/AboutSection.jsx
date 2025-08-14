@@ -1,14 +1,14 @@
 import { Box, Grid, Typography } from "@mui/material";
 import PageSectionTitle from "./_PageSectionTitle";
-import aboutImg1 from "../../assets/images/about/about3.jpg";
-import aboutImg2 from "../../assets/images/about/about1.webp";
+import Highlight from "../../components/text/Highlight";
+import aboutImg from "../../assets/images/about/about.jpg";
 
 const AboutSection = () => {
     return (
         <Grid container spacing={4} alignItems="center">
 
             {/* Imagens */}
-            <Grid size={{ xs: 12, md: 7 }}>
+            <Grid size={{ xs: 12, md: 5 }}>
                 <Box
                     sx={{
                         position: "relative",
@@ -18,7 +18,7 @@ const AboutSection = () => {
                 >
                     <Box
                         component="img"
-                        src={aboutImg1}
+                        src={aboutImg}
                         alt="Sobre a empresa"
                         sx={{
                             width: "100%",
@@ -27,40 +27,44 @@ const AboutSection = () => {
                             boxShadow: 3,
                         }}
                     />
-                    <Box
-                        component="img"
-                        src={aboutImg2}
-                        alt="Equipe Ecoportus"
-                        sx={{
-                            position: "absolute",
-                            left: 0,
-                            width: "100%",
-                            maxWidth: 380,
-                            borderRadius: 2,
-                            boxShadow: 2,
-                            bottom: 28,
-                        }}
-                    />
                 </Box>
             </Grid>
 
             {/* Texto */}
-            <Grid size={{ xs: 12, md: 5 }}>
+            <Grid size={{ xs: 12, md: 7 }}>
 
                 <PageSectionTitle
-                    overline="Sobre a Ecoportus"
-                    title="Tradição e Compromisso com a Qualidade Ecoportus"
+                    overline="Nem excesso, nem escassez"
+                    title="Lagom é equilíbrio"
+                    sx={{ mb: { xs: 2, md: 2 } }}
                 />
 
-                <Typography variant="body1" color="text.secondary" mb={2}>
-                    A Ecoportus oferece soluções completas em desentupimentos, reparos hidráulicos,
-                    dedetização e controle ambiental. Atuamos com responsabilidade, tecnologia e foco
-                    na satisfação do cliente. Com preços competitivos e atraentes.
+                <Typography variant="body1" color="text.secondary" gutterBottom>
+                    LAGOM. Na Suécia, o conceito <Highlight color="secondary.main">"lagom" representa a busca pelo equilíbrio ideal</Highlight> – nem em excesso, nem em escassez,
+                    mas na medida certa. Aplicado à sustentabilidade, buscamos inspirar soluções eficientes, responsáveis e alinhadas às reais necessidades do
+                    meio ambiente e da sociedade.
                 </Typography>
 
-                <Typography variant="body1" color="text.secondary">
-                    Nossa equipe é formada por profissionais altamente qualificados, prontos para atender
-                    de forma rápida e eficiente, respeitando normas técnicas e ambientais.
+                <Typography variant="body1" color="text.secondary" gutterBottom>
+                    Somos uma empresa de consultoria ambiental dedicada a transformar desafios em oportunidades para negócios que buscam crescer de forma responsável
+                    e sustentável. Acreditamos que o <Highlight color="secondary.main">desenvolvimento econômico e a preservação ambiental podem caminhar juntos</Highlight>,
+                    e é com essa visão que oferecemos soluções estratégicas e personalizadas para cada cliente.
+                </Typography>
+
+                <Typography variant="body1" color="text.secondary" gutterBottom>
+                    Nossos princípios são guiados pela acessibilidade, garantindo que todas as empresas, independentemente do porte, tenham acesso a soluções
+                    viáveis e eficientes; competência, com uma equipe altamente qualificada e atualizada com as melhores práticas ambientais; desenvolvimento,
+                    promovendo inovação e crescimento sustentável; equilíbrio, buscando harmonia entre progresso e conservação; e sustentabilidade,
+                    que está no centro de todas as nossas ações.
+                </Typography>
+
+                <Typography variant="body1" color="text.secondary" mb={2}>
+                    Com expertise e compromisso,
+                    <Highlight color="secondary.main">auxiliamos sua empresa a atender exigências ambientais, otimizar processos e agregar valor ao seu negócio.</Highlight>
+                </Typography>
+
+                <Typography variant="subtitle1" color="text.secondary">
+                    "Juntos, construímos um futuro mais sustentável."
                 </Typography>
             </Grid>
         </Grid>
