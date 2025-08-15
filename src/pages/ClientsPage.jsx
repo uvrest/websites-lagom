@@ -8,7 +8,7 @@ const ClientsPage = () => {
             <PageSection>
                 <ClientsSection />
             </PageSection>
-            <PageSection background="default" container={true} paddingY={12} position="relative">
+            <PageSection bgColor="default" container={true} py={12} position="relative">
                 <TestimonialsSection />
             </PageSection>
         </>

@@ -10,21 +10,23 @@ const HomePage = () => {
         <>
             <VideoBoxSection />
 
-            <PageSection background="default" container={true} paddingY={12}>
+            <PageSection bgColor="default" container={true} py={12}>
                 <FeaturesSection />
             </PageSection>
 
-            <PageSection background="paper" container={true} paddingY={8} position="relative">
+            <PageSection bgColor="paper" container={true} py={8} position="relative">
                 <ClientsSection />
             </PageSection>
 
-            <PageSection background="customDarkGreen" container={true} paddingY={12} position="relative">
-                <TestimonialsSection theme="dark" />
+            <PageSection bgColor="primary" container={true} py={12} position="relative">
+                <TestimonialsSection theme="light" />
             </PageSection>
 
+            {/*}
             <PageSection background="default" container={true} paddingY={0}>
                 <FaqSection />
             </PageSection>
+            {*/}
         </>
     )
 }

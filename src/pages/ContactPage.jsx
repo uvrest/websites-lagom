@@ -5,10 +5,10 @@ import MapSection from "./sections/MapSection";
 const ContactPage = () => {
     return (
         <>
-            <PageSection background="paper" container={true} paddingY={8} aria-labelledby="contact-cards">
+            <PageSection bgColor="paper" container={true} py={8} aria-labelledby="contact-cards">
                 <ContactCardList />
             </PageSection>
-            <PageSection background="paper" container={false} paddingY={0} aria-labelledby="contact-map">
+            <PageSection bgColor="paper" container={false} py={0} aria-labelledby="contact-map">
                 <MapSection />
             </PageSection>
         </>

@@ -4,7 +4,7 @@ import FeaturesSection from "./sections/FeaturesSection";
 const ServicesPage = () => {
     return (
         <>
-            <PageSection background="paper" container={true}>
+            <PageSection bgColor="default" container={true}>
                 <FeaturesSection />
             </PageSection>
         </>
