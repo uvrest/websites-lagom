@@ -1,4 +1,5 @@
 import { Typography, Button } from "@mui/material";
+import { Link as RouterLink } from "react-router";
 import VideoBox from "../../components/hero/video-box/VideoBox";
 import backgroundVideo from "../../assets/videos/bg-video.mp4";
 import Highlight from "../../components/text/Highlight";
@@ -22,7 +23,7 @@ const VideoBoxSection = () => {
             <Typography variant="body1" color="white" component="p" mb={2}>
                 Oferecemos soluções ambientais para empresas que buscam crescer de forma responsável e sustentável.
             </Typography>
-            <Button variant="contained" size="large">Entre em contato</Button>
+            <Button component={RouterLink} to={"/contato"} variant="contained" size="large" sx={{ borderRadius: "0 20px 0 20px", }}>Entre em contato</Button>
         </VideoBox>
     );
 }
