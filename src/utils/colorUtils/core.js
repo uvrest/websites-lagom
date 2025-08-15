@@ -50,7 +50,6 @@ export const resolveThemeColor = (background, theme) => {
     if (typeof background === 'string') {
         if (Object.prototype.hasOwnProperty.call(colorMap, background) && colorMap[background]) {
             outputColor = colorMap[background];
-            console.log(background);
         } else if (isValidHexColor(background) || isValidRGBA(background)) {
             outputColor = background;
         }

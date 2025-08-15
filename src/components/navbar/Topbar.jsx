@@ -42,7 +42,7 @@ const TopBar = () => {
         >
             <Container sx={{ display: "flex", alignItems: "center" }}>
 
-                <Stack direction="row" spacing={2}>
+                <Stack direction="row" spacing={2} sx={{ display: { xs: "none", lg: "flex" } }}>
                     {contactItems.map((item, index) => (
                         <ContactItem
                             key={index}

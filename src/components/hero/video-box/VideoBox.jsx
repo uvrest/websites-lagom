@@ -40,13 +40,16 @@ const VideoBox = ({ videoPath, overlayColor, children }) => {
                         py: 10,
                         position: 'absolute',
                         zIndex: 1,
-                        width: '60%',
-                        //background: theme.custom.color.darkGreen,
+                        width: '60%', // valor padrão (lg pra cima)
                         border: `1px solid ${theme.palette.primary.main}`,
                         left: 0,
-                        top: "50%",
-                        transform: "translateY(-50%)",
-                        borderRadius: "0 100px",
+                        top: '50%',
+                        transform: 'translateY(-50%)',
+                        borderRadius: '0 100px',
+                        // sobrescreve para md e menores
+                        [theme.breakpoints.down('md')]: {
+                            width: '98%',
+                        },
                     })}
                 >
                     {children}

@@ -36,7 +36,7 @@ const TeamList = () => {
     return (
         <Grid container spacing={2}>
             {people.map((person) => (
-                <Grid size={6} key={person.id}>
+                <Grid size={{ md: 12, lg: 6 }} key={person.id}>
                     <TeamCard
                         key={person.id}
                         image={person.image}

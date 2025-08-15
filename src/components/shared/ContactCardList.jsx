@@ -14,12 +14,12 @@ const ContactCardList = () => {
         <Grid container spacing={2}>
             {contactData.map((item) => {
                 return (
-                    <Grid key={item.id} size={{ lg: 3, md: 6 }}>
+                    <Grid key={item.id} size={{ xs: 12, lg: 3 }}>
                         <ContactCard
                             title={item.title}
                             description={item.description}
                             icon={item.icon}
-                            sx={{ height: "100%", }}
+                            sx={{ height: "100%" }}
                         />
                     </Grid>
                 );

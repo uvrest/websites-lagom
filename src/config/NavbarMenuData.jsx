@@ -23,8 +23,10 @@ export const NavbarMenuData = [
         label: "Contato",
         to: "/contato",
     },
+    /*
     {
         label: "Artigos",
         to: "/artigos",
     },
+    */
 ];

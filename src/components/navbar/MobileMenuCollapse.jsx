@@ -3,8 +3,9 @@ import { Link as RouterLink } from "react-router";
 
 const menuItems = [
     { label: "Início", path: "/" },
-    { label: "Empresa", path: "/empresa" },
+    { label: "Sobre", path: "/sobre" },
     { label: "Serviços", path: "/servicos" },
+    { label: "Clientes", path: "/clientes" },
     { label: "Contato", path: "/contato" },
 ];
 

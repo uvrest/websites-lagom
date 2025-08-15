@@ -7,14 +7,17 @@ const AboutSection = () => {
     return (
         <Grid container spacing={4} alignItems="center">
 
-            {/* Imagens */}
+            {/* Imagem */}
             <Grid size={{ xs: 12, md: 5 }}>
                 <Box
-                    sx={{
+                    sx={(theme) => ({
                         position: "relative",
                         display: "flex",
                         justifyContent: "flex-end",
-                    }}
+                        [theme.breakpoints.down('md')]: {
+                            justifyContent: "center",
+                        },
+                    })}
                 >
                     <Box
                         component="img"

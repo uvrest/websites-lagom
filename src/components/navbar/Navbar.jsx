@@ -53,14 +53,13 @@ const Navbar = () => {
                                 </Box>
 
                                 {/** Navbar actions */}
-                                <Box>
+                                <Box sx={{ display: { xs: "none", md: "flex" } }}>
                                     <NavbarCTA />
                                 </Box>
                             </Box>
 
                             {/** Hamburger menu */}
                             <IconButton
-                                edge="end"
                                 color="inherit"
                                 aria-label="menu"
                                 onClick={handleMenuToggle}

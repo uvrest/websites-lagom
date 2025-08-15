@@ -19,7 +19,7 @@ const ContactCard = ({ title, description, icon, sx }) => {
                     color: theme.palette.primary.dark,
                     background: theme.palette.common.white,
                 },
-                ...sx
+                ...sx,
             })}
         >
             <Box mb={2}>
