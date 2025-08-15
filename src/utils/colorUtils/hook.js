@@ -3,6 +3,7 @@ import { useTheme } from "@mui/material/styles";
 import { resolveThemeColor } from "./core";
 
 export const useResolveThemeColor = () => {
+
     const theme = useTheme();
 
     // (Opcional) se quisermos memoizar algo do theme pra muitas chamadas

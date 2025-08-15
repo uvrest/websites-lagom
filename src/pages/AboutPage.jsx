@@ -1,16 +1,16 @@
-import { Grid, Typography } from "@mui/material";
 import AboutSection from "./sections/AboutSection";
 import TeamSection from "./sections/TeamSection";
 import PageSection from "./sections/_PageSection";
+import teamBackground from "../assets/images/abstract/bg-abstract1.png";
 
 const AboutPage = () => {
     return (
         <>
-            <PageSection background="default">
+            <PageSection bgColor="paper">
                 <AboutSection />
             </PageSection>
 
-            <PageSection background="primaryLight">
+            <PageSection header={{ title: "Quem somos", align: "center" }} overlayColor="primary" overlayOpacity={0.85} bgImage={teamBackground}>
                 <TeamSection />
             </PageSection>
         </>

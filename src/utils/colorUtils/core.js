@@ -30,6 +30,7 @@ export const isValidRGBA = (colorString) => {
 
 // Versão pura: recebe o theme de fora
 export const resolveThemeColor = (background, theme) => {
+
     const colorMap = {
         white: theme?.palette?.common?.white,
         black: theme?.palette?.common?.black,
@@ -49,6 +50,7 @@ export const resolveThemeColor = (background, theme) => {
     if (typeof background === 'string') {
         if (Object.prototype.hasOwnProperty.call(colorMap, background) && colorMap[background]) {
             outputColor = colorMap[background];
+            console.log(background);
         } else if (isValidHexColor(background) || isValidRGBA(background)) {
             outputColor = background;
         }
