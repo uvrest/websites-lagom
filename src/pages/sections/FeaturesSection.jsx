@@ -13,6 +13,16 @@ const services = [
         icon: ContentPasteRounded,
         title: "Licenciamento Ambiental",
         description: "Assessoria completa no processo de licenciamento ambiental, garantindo conformidade legal e sustentabilidade para seu empreendimento.",
+        details: [
+            'Estudos Ambientais (EIA, RIMA, PBA, EAS, RAP)',
+            'Execução de Monitoramento Ambiental',
+            'Relatório Anual de Atividades Potencialmente Poluidoras – RAPP',
+            'Plano de Recuperação de Área Degradada – PRAD',
+            'Plano de Gerenciamento de Resíduos – PGRS – PGRCC',
+            'Diagnóstico Socioambiental – DSA',
+            'Inventário Florestal',
+            'Estudo Hidrogeológico',
+        ],
         image: licenciamentoAmbiental,
     },
     {
@@ -20,6 +30,11 @@ const services = [
         icon: LocationCityRounded,
         title: "Planejamento Urbano",
         description: "Soluções estratégicas para o desenvolvimento urbano, promovendo ocupação ordenada, mobilidade e qualidade de vida.",
+        details: [
+            'Estudo de Impacto de Vizinhança – EIV',
+            'Estudo de Impacto de Tráfego – EIT',
+            'Laudo Acústico',
+        ],
         image: planejamentoUrbano,
     },
     {
@@ -27,6 +42,11 @@ const services = [
         icon: CompostRounded,
         title: "Soluções Ambientais",
         description: "Projetos e ações sustentáveis para prevenção, mitigação e recuperação de impactos ambientais em diferentes setores.",
+        details: [
+            'Estudos de Viabilidade Ambiental',
+            'Cadastro Ambiental Rural – CAR',
+            'Georreferenciamento e Geoprocessamento',
+        ],
         image: solucoesAmbientais,
     },
     {
@@ -34,6 +54,12 @@ const services = [
         icon: SquareFootRounded,
         title: "Consultoria Geotécnica",
         description: "Análises técnicas do solo e subsolo para garantir segurança, viabilidade e eficiência em obras e empreendimentos.",
+        details: [
+            'Projeto de Terraplenagem',
+            'Estabilização de taludes',
+            'Projeto de contenções',
+            'Projeto de drenagem pluvial',
+        ],
         image: consultoriaGeotecnica,
     },
 ];
