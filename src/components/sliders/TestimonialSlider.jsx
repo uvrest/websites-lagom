@@ -13,12 +13,12 @@ const TestimonialSlider = ({ testimonials }) => {
             spaceBetween={24}
             slidesPerView={5}
             loop
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            autoplay={{ delay: 10000, disableOnInteraction: false }}
             breakpoints={{
                 0: { slidesPerView: 1 },
                 600: { slidesPerView: 1 },
-                900: { slidesPerView: 2 },
-                1200: { slidesPerView: 3 },
+                900: { slidesPerView: 1 },
+                1200: { slidesPerView: 1 },
             }}
         >
             {testimonials.map((testimonial, index) => (

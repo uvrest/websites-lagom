@@ -1,46 +1,36 @@
 import TestimonialSlider from "../../components/sliders/TestimonialSlider";
 import PageSectionTitle from "./_PageSectionTitle";
 
+import Tonolher from "../../assets/images/testimonials/tonolher.jpg";
+import Marini from "../../assets/images/testimonials/marini.jpg";
+
 const testimonials = [
     {
         id: 1,
-        avatar: undefined,
-        name: "Gabriel Coelho",
-        subtitle: "Desenvolvedor",
+        avatar: Marini,
+        name: "Marini",
+        subtitle: "Construções",
         rating: 5,
-        testimonial: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        testimonial: `
+            Gostaria de expressar minha sincera satisfação com os serviços prestados pela Lagom Engenharia.
+            Desde o início da escolha do terreno, a equipe demonstrou um profundo conhecimento e comprometimento com o licenciamento ambiental.
+            A atenção aos detalhes e a capacidade de responder a todas as nossas dúvidas foram fundamentais para o sucesso do processo.
+            Além disso, a Lagom se destacou pela sua transparência e ética, sempre nos mantendo informados sobre cada etapa.
+            Recomendo a Lagom Engenharia a qualquer empresa que busque um parceiro confiável e competente!
+        `,
     },
     {
         id: 2,
-        avatar: undefined,
-        name: "Luana Sperry",
-        subtitle: "Sócia",
+        avatar: Tonolher,
+        name: "Tonolher",
+        subtitle: "Construtora",
         rating: 5,
-        testimonial: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    },
-    {
-        id: 3,
-        avatar: undefined,
-        name: "Gabriela",
-        subtitle: "Sócia",
-        rating: 5,
-        testimonial: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    },
-    {
-        id: 4,
-        avatar: undefined,
-        name: "Nome da pessoa",
-        subtitle: "Curitiba / PR",
-        rating: 4.5,
-        testimonial: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    },
-    {
-        id: 5,
-        avatar: undefined,
-        name: "Nome da pessoa",
-        subtitle: "CEO",
-        rating: 4,
-        testimonial: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        testimonial: `
+            Precisávamos de uma empresa solida e com expertise em licenças ambientais e acabamos escolhendo a Lagon para tomar frente a um
+            dos nossos principais empreendimentos, o Sky Shopping Camboriu. Estamos contentes com o andamento do processo já iniciado e
+            sabemos que temos ainda um longo caminho pela frente, mas a certeza que juntos vamos desenvolver um ótimo trabalho e atender
+            todas as necessidades do projeto e de nossos clientes.
+        `,
     },
 ];
 
