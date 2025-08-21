@@ -4,7 +4,7 @@ import { LocalPhoneRounded, EmailRounded, PinDropRounded } from "@mui/icons-mate
 const contactData = [
     {
         primary: "Contato",
-        secondary: "(47) 99607-0223",
+        secondary: "(47) 99131-5699",
         icon: <LocalPhoneRounded sx={{ color: 'text.primary' }} />,
     },
     {
@@ -14,7 +14,7 @@ const contactData = [
     },
     {
         primary: "Localização",
-        secondary: "Itapema/SC",
+        secondary: "R. Heitor Santos - Centro, Camboriú - SC, 88340-314",
         icon: <PinDropRounded sx={{ color: 'text.primary' }} />,
     },
 ];

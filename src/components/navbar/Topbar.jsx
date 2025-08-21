@@ -1,17 +1,18 @@
 import { Box, Stack, IconButton, Container } from "@mui/material";
 import { useTheme } from "@emotion/react";
-import { PhoneRounded, WhatsApp, EmailRounded, Instagram } from "@mui/icons-material";
+import { PhoneRounded, WhatsApp, EmailRounded, Instagram, LinkedIn } from "@mui/icons-material";
 import ToggleThemeSwitch from "../shared/ToggleThemeSwitch";
 import { getContrastTextFor } from "../../utils/themeUtils";
 import ContactItem from "../shared/ContactItem";
 
 const contactItems = [
-    { icon: <WhatsApp />, text: "(47) 99607-0223" },
+    { icon: <WhatsApp />, text: "(47) 99131-5699" },
     { icon: <EmailRounded />, text: "contato@lagomengenharia.com.br" },
 ];
 
 const socialMediaItems = [
     { icon: <Instagram />, href: "https://www.instagram.com/lagom.engenharia/" },
+    { icon: <LinkedIn />, href: "https://www.linkedin.com/company/lagomengenharia/" },
 ];
 
 const SocialMediaItem = ({ icon, href, target = "_blank" }) => (
@@ -59,7 +60,7 @@ const TopBar = () => {
                     <ToggleThemeSwitch />
                     {*/}
 
-                    <Stack direction="row" spacing={1}>
+                    <Stack direction="row" spacing={0}>
                         {socialMediaItems.map((item, index) => (
                             <SocialMediaItem key={index} icon={item.icon} href={item.href} />
                         ))}
