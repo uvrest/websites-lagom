@@ -5,8 +5,8 @@ import Highlight from "../../components/text/Highlight";
 const AboutHeroSection = () => {
     return (
         <Box sx={(theme) => ({
-            px: 6,
-            pt: 6,
+            px: { xs: 3, md: 8 },
+            pt: 12,
             pb: 0
         })}>
             <Box

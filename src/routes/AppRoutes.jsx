@@ -3,10 +3,7 @@ import { Routes, Route } from "react-router";
 import LinearProgress from '@mui/material/LinearProgress';
 import SiteLayout from "../layouts/SiteLayout";
 import DefaultPageLayout from "../layouts/DefaultPageLayout";
-import ServiceLayout from "../layouts/ServiceLayout";
 import NotFoundPage from "../pages/NotFoundPage";
-
-import LicenciamentoPage from "../pages/services/LicenciamentoPage";
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AboutPage = lazy(() => import('../pages/AboutPage'));
@@ -27,34 +24,27 @@ const AppRoutes = () => {
 
                     <Route index element={<HomePage />} />
 
-                    <Route element={<DefaultPageLayout title="Sobre a Lagom" imageName="about.jpg" />}>
+                    <Route element={<DefaultPageLayout title="Sobre a Lagom" />}>
                         <Route path="/sobre" element={<AboutPage />} />
                     </Route>
 
                     <Route path="servicos">
 
-                        <Route element={<DefaultPageLayout title="Nossos Serviços" imageName="about.jpg" />}>
+                        <Route element={<DefaultPageLayout title="Nossos Serviços" />}>
                             <Route index element={<ServicesPage />} />
                         </Route>
 
-                        <Route element={<ServiceLayout />}>
-                            <Route path="licenciamento-ambiental" element={<LicenciamentoPage />} />
-                            <Route path="planejamento-urbano" element={<LicenciamentoPage />} />
-                            <Route path="solucoes-ambientais" element={<LicenciamentoPage />} />
-                            <Route path="consultoria-geotecnica" element={<LicenciamentoPage />} />
-                        </Route>
-
                     </Route>
 
-                    <Route element={<DefaultPageLayout title="Clientes" imageName="about.jpg" />}>
+                    <Route element={<DefaultPageLayout title="Clientes" />}>
                         <Route path="/clientes" element={<ClientsPage />} />
                     </Route>
 
-                    <Route element={<DefaultPageLayout title="Contato" imageName="about.jpg" />}>
+                    <Route element={<DefaultPageLayout title="Contato" />}>
                         <Route path="/contato" element={<ContactPage />} />
                     </Route>
 
-                    <Route element={<DefaultPageLayout title="Artigos" imageName="about.jpg" />}>
+                    <Route element={<DefaultPageLayout title="Artigos" />}>
                         <Route path="/artigos" element={<BlogPage />} />
                     </Route>
 

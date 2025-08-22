@@ -1,41 +1,48 @@
-import { Box, Container, Breadcrumbs, Link as MuiLink, Typography } from "@mui/material";
+import { Box, Container, Breadcrumbs, Link as MuiLink, Typography, alpha } from "@mui/material";
 import { useLocation } from "react-router";
 import { unslugify } from "../../utils/stringUtils";
+import symbolImg from "../../assets/images/abstract/acessibilidade-white.png";
 
-const PageHeader = ({ title, imageName }) => {
+const PageHeader = ({ title }) => {
 
     const location = useLocation();
     const pathnames = location.pathname.split("/").filter((x) => x);
 
-    const hasImage = Boolean(imageName);
-    const imageUrl = hasImage
-        ? `${import.meta.env.BASE_URL}src/assets/images/page-headers/${imageName}`
-        : null;
-
     return (
         <Box
             sx={{
-                height: 350,
+                position: "relative",
+                overflow: "hidden",
+                zIndex: 2,
+                height: { xs: 250, md: 200 },
                 display: "flex",
                 alignItems: "flex-end",
-                backgroundImage: hasImage ? `url(${imageUrl})` : undefined,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                position: "relative",
-                color: "white",
                 p: 4,
-                backgroundColor: hasImage ? undefined : (theme) => theme.palette.primary.main,
-                "&::before": hasImage
-                    ? {
-                        content: '""',
-                        position: "absolute",
-                        inset: 0,
-                        backgroundColor: "rgba(0,0,0,0.5)",
-                        zIndex: 1,
-                    }
-                    : undefined,
+                '&::after': {
+                    content: "''",
+                    position: 'absolute',
+                    inset: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: -1,
+                    backgroundColor: (theme) => alpha(theme.palette.primary.light, 0.95),
+                }
             }}
         >
+
+            {/** Absoluted Symbol */}
+            <Box
+                component='img'
+                src={symbolImg}
+                sx={{
+                    position: 'absolute',
+                    right: 50,
+                    top: -25,
+                    maxWidth: 300,
+                    filter: "brightness(100)",
+                }}
+            />
+
             <Container sx={{ zIndex: 2 }}>
                 <Breadcrumbs sx={{ mb: 1 }} separator="›" color="inherit">
                     <MuiLink underline="hover" color="inherit" href="/">
