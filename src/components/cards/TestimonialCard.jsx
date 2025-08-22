@@ -1,24 +1,24 @@
-import { Box, Stack, Typography, Card, Avatar, Rating } from "@mui/material";
+import { Box, Stack, Typography, Card, Avatar, Rating, Divider } from "@mui/material";
 
 const TestimonialCard = ({ avatar, name, subtitle, testimonial, rating }) => {
     return (
         <Card
             sx={{
-                height: "100%",
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-between",
                 p: 5,
+                minHeight: 250,
             }}
         >
             {/* Header: Avatar + Info */}
-            <Stack direction="row" justifyContent='space-between' alignItems='center' spacing={2} mb={2}>
-                <Stack direction="row" spacing={2} alignItems="center" mb={2}>
-                    <Avatar
-                        src={avatar}
-                        alt={name}
-                        sx={{ width: 64, height: 64 }}
-                    />
+            <Stack
+                direction="row"
+                justifyContent="space-between"
+                alignItems="center"
+                spacing={2}
+            >
+                <Stack direction="row" spacing={2} alignItems="center">
+                    <Avatar src={avatar} alt={name} sx={{ width: 64, height: 64 }} />
                     <Box>
                         <Typography variant="subtitle1" fontWeight={600}>
                             {name}
@@ -28,18 +28,30 @@ const TestimonialCard = ({ avatar, name, subtitle, testimonial, rating }) => {
                         </Typography>
                     </Box>
                 </Stack>
-                {/* Rating */}
-                {rating !== undefined && rating !== null && (
-                    <Box>
-                        <Rating value={rating} precision={0.5} readOnly size="small" sx={{ mb: 2 }} />
-                    </Box>
+
+                {rating != null && (
+                    <Rating value={rating} precision={0.5} readOnly size="small" />
                 )}
             </Stack>
 
-            {/* Testimonial text */}
-            <Typography variant="body1" color="text.primary" sx={{ lineHeight: 1.6 }}>
-                "{testimonial}"
-            </Typography>
+            <Divider sx={{ my: 2 }} />
+
+            <Box sx={{ mt: "auto" }}>
+                <Typography
+                    variant="body1"
+                    color="text.primary"
+                    sx={{
+                        lineHeight: 1.6,
+                        display: "-webkit-box",
+                        WebkitLineClamp: { xs: 25, md: 6 }, // quantas linhas no máx.
+                        WebkitBoxOrient: "vertical",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                    }}
+                >
+                    "{testimonial}"
+                </Typography>
+            </Box>
 
 
         </Card>
