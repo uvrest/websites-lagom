@@ -48,7 +48,10 @@ const ThemeProvider = ({ children }) => {
     };
 
     // Define qual tema será usado
-    const theme = themeMode === "light" ? lightTheme : darkTheme;
+    //const theme = themeMode === "light" ? lightTheme : darkTheme;
+
+    //Force Light Theme in this Project
+    const theme = lightTheme;
 
     return (
         <ThemeContext.Provider value={{ themeMode, toggleTheme }}>
