@@ -1,8 +1,9 @@
-import { Typography, Button } from "@mui/material";
-import { Link as RouterLink } from "react-router";
+import { Typography, Button, Link } from "@mui/material";
+import { WhatsApp } from "@mui/icons-material";
 import VideoBox from "../../components/hero/video-box/VideoBox";
 import backgroundVideo from "../../assets/videos/bg-video.mp4";
 import Highlight from "../../components/text/Highlight";
+import { whatsappInfo } from "../../config/contactData";
 
 const VideoBoxSection = () => {
 
@@ -20,10 +21,20 @@ const VideoBoxSection = () => {
                 Acreditamos que o meio ambiente é um bem muito
                 valioso, que deve ser protegido e preservado para as gerações futuras.
             </Typography>
-            <Typography variant="body1" color="white" component="p" mb={2}>
+            <Typography variant="body1" color="white" component="p" mb={2} sx={{ display: { xs: 'none', md: 'block' } }}>
                 Oferecemos soluções ambientais para empresas que buscam crescer de forma responsável e sustentável.
             </Typography>
-            <Button component={RouterLink} to={"/contato"} variant="contained" size="large" sx={{ borderRadius: "0 20px 0 20px", }}>Entre em contato</Button>
+            <Button
+                component={Link}
+                href={whatsappInfo.linkSrc}
+                target="_blank"
+                startIcon={<WhatsApp />}
+                variant="contained"
+                size="large"
+                sx={{ borderRadius: "0 20px 0 20px", }}
+            >
+                Entre em contato
+            </Button>
         </VideoBox>
     );
 }

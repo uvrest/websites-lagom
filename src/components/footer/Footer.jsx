@@ -1,4 +1,4 @@
-import { Box, Grid, Container, Typography } from "@mui/material";
+import { Box, Grid, Container, Typography, Link } from "@mui/material";
 import RenderLogo from "../navbar/RenderLogo";
 import FooterContentBlock from "./FooterContentBlock";
 import FooterLinkList from "./FooterLinkList";
@@ -55,8 +55,19 @@ const Footer = () => {
                     </Grid>
                 </Container>
             </Box>
-            <Box py={1} textAlign="center" fontSize={12} opacity={0.8} backgroundColor="primary.main">
-                © {new Date().getFullYear()} Ecoportus - Soluções Ambientais. Todos os direitos reservados.
+            <Box py={1} textAlign='center' fontSize={14} opacity={0.8} backgroundColor="primary.main">
+                <Container>
+                    <Grid container spacing={2}>
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            © {new Date().getFullYear()} Lagom - Engenharia Ambiental. Todos os direitos reservados.
+                        </Grid>
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <Box sx={{ width: "100%", display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
+                                Desenvolvido por:<Link color="secondary" href="tel:5551994426690" sx={{ fontWeight: 500, ml: 0.5 }}>Gabriel Coelho</Link>
+                            </Box>
+                        </Grid>
+                    </Grid>
+                </Container>
             </Box>
         </>
     )

@@ -37,7 +37,7 @@ const TopBar = () => {
             alignItems="center"
             flexWrap="wrap"
             zIndex={1}
-            py={{ xs: 2, md: 0 }}
+            py={{ xs: 1, md: 0 }}
             gap={2}
             backgroundColor={{ backgroundColor: theme.palette.primary.main }}
         >

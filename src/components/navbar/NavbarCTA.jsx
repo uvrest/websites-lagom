@@ -2,6 +2,7 @@ import React from "react";
 import { Stack } from "@mui/material";
 import { WhatsApp, PhoneRounded } from "@mui/icons-material";
 import CTAButton from "../shared/CTAButton";
+import { whatsappInfo } from "../../config/contactData";
 
 const NavbarCTA = () => {
     return (
@@ -13,9 +14,9 @@ const NavbarCTA = () => {
                 iconPosition="start"
                 textAlignment="left"
                 subtitle="Contate-nos"
-                title="(47) 99131-5699"
-                phone="47991315699"
-                message="Olá, gostaria de tirar algumas dúvidas a respeito dos serviços prestados pela Lagom."
+                title={whatsappInfo.phone}
+                phone={whatsappInfo.normalizedPhone}
+                message={whatsappInfo.defaultMessage}
                 target="_blank"
             />
         </Stack>

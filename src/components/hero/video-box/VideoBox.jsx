@@ -7,8 +7,9 @@ const VideoBox = ({ videoPath, overlayColor, children }) => {
             sx={{
                 position: 'relative',
                 width: '100%',
-                height: '80vh',
+                height: { xs: '100vh', md: '80vh' },
                 overflow: 'hidden',
+                py: { xs: 2, md: 0, }
             }}
         >
 
@@ -49,6 +50,7 @@ const VideoBox = ({ videoPath, overlayColor, children }) => {
                         // sobrescreve para md e menores
                         [theme.breakpoints.down('md')]: {
                             width: '98%',
+                            left: '1%',
                         },
                     })}
                 >
