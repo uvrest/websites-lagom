@@ -6,6 +6,7 @@ import FooterContactList from "./FooterContactList";
 import SocialMediaList from "../shared/SocialMediaList";
 import Highlight from "../text/Highlight";
 import { QuickMenuData, ServicesMenuData } from "../../config/FooterMenuData";
+import DeveloperCredit from "../shared/DeveloperCredit";
 
 const Footer = () => {
     return (
@@ -57,13 +58,15 @@ const Footer = () => {
             </Box>
             <Box py={1} textAlign='center' fontSize={14} opacity={0.8} backgroundColor="primary.main">
                 <Container>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={0}>
                         <Grid size={{ xs: 12, md: 6 }}>
-                            © {new Date().getFullYear()} Lagom - Engenharia Ambiental. Todos os direitos reservados.
+                            <Box sx={{ width: "100%", display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                                © {new Date().getFullYear()} Lagom - Engenharia Ambiental. Todos os direitos reservados.
+                            </Box>
                         </Grid>
                         <Grid size={{ xs: 12, md: 6 }}>
                             <Box sx={{ width: "100%", display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
-                                Desenvolvido por:<Link color="secondary" href="tel:5551994426690" sx={{ fontWeight: 500, ml: 0.5 }}>Gabriel Coelho</Link>
+                                <DeveloperCredit />
                             </Box>
                         </Grid>
                     </Grid>
