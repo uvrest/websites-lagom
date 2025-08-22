@@ -4,6 +4,7 @@ import LinearProgress from '@mui/material/LinearProgress';
 import SiteLayout from "../layouts/SiteLayout";
 import DefaultPageLayout from "../layouts/DefaultPageLayout";
 import NotFoundPage from "../pages/NotFoundPage";
+import ScrollToTop from "./ScrollToTop";
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const AboutPage = lazy(() => import('../pages/AboutPage'));
@@ -16,6 +17,8 @@ const AppRoutes = () => {
 
     return (
         <Suspense fallback={<LinearProgress />}>
+
+            <ScrollToTop />
 
             {/** Utilizar este top route para middlewares */}
             <Routes path="/" key="public">
