@@ -96,7 +96,7 @@ const FeatureCard = ({ icon: Icon, title, description, details, image, alt = '',
                 <CardMedia
                     component="img"
                     alt={alt || title}
-                    height="225"
+                    height="275"
                     image={image}
                     loading="lazy"
                 />

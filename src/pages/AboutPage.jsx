@@ -6,7 +6,7 @@ import teamBackground from "../assets/images/abstract/bg-abstract1.png";
 const AboutPage = () => {
     return (
         <>
-            <PageSection bgColor="paper">
+            <PageSection bgColor="paper" container={false} py={0}>
                 <AboutSection />
             </PageSection>
 
